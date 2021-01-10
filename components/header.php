@@ -1,9 +1,17 @@
+<?php
+
+$app_name = 'Russia Shipping Line';
+
+require_once "./lib/config.php";
+
+?>
+
 <!doctype html>
 <html class="no-js" lang="zxx">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title><?php echo ucfirst($title ?? '') ?> | The Logistics Company </title>
+    <title><?php echo ucfirst($title ?? '') . ' | ' . ucwords($app_name) ?> </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
@@ -21,6 +29,7 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 <body>
 <!--? Preloader Start -->
@@ -46,7 +55,7 @@
                             <div class="header-info-left">
                                 <ul>     
                                     <li>Phone: +99 (0) 101 0000 888</li>
-                                    <li>Email: noreply@yourdomain.com</li>
+                                    <li>Email: hello@russiashipping.com</li>
                                 </ul>
                             </div>
                             <!-- <div class="header-info-right">
@@ -67,7 +76,7 @@
                         <!-- Logo -->
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo">
-                                <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                <a href="index.php"><img src="assets/img/logo/logo.png" alt=""></a>
                             </div>
                         </div>
                         <div class="col-xl-10 col-lg-10">
@@ -76,9 +85,9 @@
                                 <div class="main-menu d-none d-lg-block">
                                     <nav> 
                                         <ul id="navigation">                                                                                          
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a href="services.html">Services</a></li>
+                                            <li><a href="index.php">Home</a></li>
+                                            <li><a href="about.php">About</a></li>
+                                            <!-- <li><a href="services.html">Services</a></li> -->
                                             <!-- <li><a href="blog.html">Blog</a>
                                                 <ul class="submenu">
                                                     <li><a href="blog.html">Blog</a></li>
@@ -91,9 +100,9 @@
                                     </nav>
                                 </div>
                                 <!-- Header-btn -->
-                                <div class="header-right-btn d-none d-lg-block ml-20">
+                                <!-- <div class="header-right-btn d-none d-lg-block ml-20">
                                     <a href="contact.html" class="btn header-btn">Get A Qoue</a>
-                                </div>
+                                </div> -->
                             </div>
                         </div> 
                         <!-- Mobile Menu -->
