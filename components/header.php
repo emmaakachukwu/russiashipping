@@ -86,7 +86,7 @@ require_once "./lib/config.php";
                                     <nav> 
                                         <ul id="navigation">                                                                                          
                                             <li><a href="index.php">Home</a></li>
-                                            <li><a href="about.php">About</a></li>
+                                            <li><a href="#">About</a></li>
                                             <!-- <li><a href="services.html">Services</a></li> -->
                                             <!-- <li><a href="blog.html">Blog</a>
                                                 <ul class="submenu">
@@ -95,7 +95,7 @@ require_once "./lib/config.php";
                                                     <li><a href="elements.html">Element</a></li>
                                                 </ul>
                                             </li> -->
-                                            <li><a href="contact.html">Contact</a></li>
+                                            <!-- <li><a href="#">Contact</a></li> -->
                                         </ul>
                                     </nav>
                                 </div>

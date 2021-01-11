@@ -4,7 +4,7 @@ $title = "Tracking Info";
 require_once "./components/header.php";
 
 if ( !isset($_SESSION['tracking_id']) || empty($_SESSION['tracking_id']) )
-    header("location: ./index.php");
+    exit;
 else
     $tracking_id = $_SESSION['tracking_id'];
 
@@ -15,7 +15,7 @@ if ( $result->num_rows ) {
     while($res = $result->fetch_object())
         array_push($tracks, $res);
 } else {
-    header("location: ./index.php");
+    exit;
 }
 
 ?>

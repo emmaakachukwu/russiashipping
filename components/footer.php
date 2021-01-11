@@ -24,7 +24,7 @@
                                 <h4>LINKS</h4>
                                 <ul>
                                     <li><a href="./index.php">Home</a></li>
-                                    <li><a href="./about.php">About Us</a></li>
+                                    <li><a href="#">About Us</a></li>
                                     <li><a href="#"> Privacy Policy</a></li>
                                 </ul>
                             </div>

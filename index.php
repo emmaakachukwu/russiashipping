@@ -15,7 +15,7 @@ require_once "./components/header.php";
                     <div class="row">
                         <div class="col-xl-9 col-lg-9">
                             <div class="hero__caption">
-                                <h1 >Safe & Reliable <span>Logistic</span> Solutions!</h1>
+                                <h1><?php echo ucwords($app_name ?? '') ?><br> <span>Logistic</span> Solutions!</h1>
                             </div>
                             <!--Hero form -->
                             <form action="./forms/index.php" method="post" class="search-box" id="search-form">
