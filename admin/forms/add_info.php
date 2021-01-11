@@ -18,7 +18,7 @@ if ( $result->num_rows )
 
 $at = date('Y-m-d H:i:s');
 $sql = $link->prepare("INSERT INTO `deliveries` (`tracking_id`, `location`, `status`, `destination`, departure_address, created_at) VALUES (?, ?, ?, ?, ?, ?)");
-$sql->bind_param("ssssss", $tracking_id, $track->location, $status, $destination, $track->departure_address, $at);
+$sql->bind_param("ssssss", $tracking_id, $location, $status, $destination, $track->departure_address, $at);
 if ( $sql->execute() ) {
     $sql->close();
     $_SESSION['success'] = ['Delivery Info Added'];
