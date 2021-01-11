@@ -2,7 +2,7 @@
 $title = 'Deliveries';
 require_once "./lib/nav.php";
 
-$sql = "SELECT * FROM deliveries WHERE id IN (SELECT MAX(id) FROM deliveries GROUP BY tracking_id) AND deleted_at IS NULL ORDER BY created_at ASC";
+$sql = "SELECT * FROM deliveries WHERE id IN (SELECT MAX(id) FROM deliveries GROUP BY tracking_id) AND deleted_at IS NULL ORDER BY created_at DESC";
 $result = $link->query($sql);
 $deliveries = [];
 if ( $result->num_rows ) {
@@ -46,7 +46,7 @@ function shorten_sring(string $var): string {
                         <td><?php echo date('d M, Y h:i a', strtotime($deliveries[$i]->created_at)) ?? '' ?></td>
                         <td><?php echo $deliveries[$i]->location ?></td>
                         <td><?php echo $deliveries[$i]->status ?></td>
-                        <td><button class="btn btn-primary">Update Info</button></td>
+                        <td><a href="./add_info.php?tracking_id=<?php echo $deliveries[$i]->tracking_id ?>" class="btn btn-primary">Add Info</a></td>
                     </tr>
                 <?php } ?>
             </tbody>

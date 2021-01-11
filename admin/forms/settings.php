@@ -19,24 +19,7 @@ $recipient = $recipient ?? null;
 $swift = $swift ?? null;
 $updated_at = date('Y-m-d H:i:s');
 
-if ( $tab != 'password' ) {
-    foreach ( $post as $key => $value ) {
-        try {
-            $sql = $link->prepare("UPDATE `wallets` SET wallet_id=?, bank_name=?, bank_address=?, recipient_name=?, swift_code=?, updated_at=? WHERE type=?");
-            // dd($link->error);
-            $sql->bind_param("sssssss", $wid, $bname, $baddress, $recipient, $swift, $updated_at, $tab);
-            $sql->execute();
-            $sql->close();
-        } catch (Exception $e) {
-            array_push($errors, 'Something went wrong updating details');
-            $sql->close();
-            check_errors($errors);
-        }
-    }
-
-    $_SESSION['success'] = ["Wallet info updated"];
-    on_success('settings');
-} else {
+if ( $tab == 'password' ) {
     $sql = $link->prepare("SELECT id, password FROM users WHERE id = ? AND role = 'admin' LIMIT 1");
     $sql->bind_param("s", $id);
     if ( $sql->execute() ) {

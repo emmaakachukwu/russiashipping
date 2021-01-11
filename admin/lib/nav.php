@@ -104,15 +104,6 @@ $title = ucfirst($title ?? 'Home');
 							<li><a href="./add_delivery.php">Add Delivery</a></li>
 						</ul>
 					</li>
-					<li class="dropdown">
-						<a href="javascript:;" class="dropdown-toggle">
-							<span class="micon dw dw-exchange"></span><span class="mtext">Payments</span>
-						</a>
-						<ul class="submenu">
-							<li><a href="./payments.php?approved=false">UnApproved Payments</a></li>
-							<li><a href="./payments.php?approved=true">Approved Payments</a></li>
-						</ul>
-					</li>
 					<li>
 						<a href="./settings.php" class="dropdown-toggle no-arrow">
 							<span class="micon dw dw-settings2"></span><span class="mtext">Settings</span>

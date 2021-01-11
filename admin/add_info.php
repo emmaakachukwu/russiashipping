@@ -1,6 +1,25 @@
 <?php
-$title = 'Add Delivery';
+
+$title = 'Add Info';
 require_once "./lib/nav.php";
+
+$tracking_id = isset($_GET['tracking_id']) ? trim($_GET['tracking_id']) : null;
+
+if ( !$tracking_id || empty(trim($id)) ) {
+    _404_error();
+}
+
+$sql = "SELECT * FROM deliveries WHERE tracking_id = '$tracking_id' AND deleted_at IS NULL LIMIT 1";
+$result = $link->query($sql);
+if ( !$result->num_rows ) {
+    _404_error();
+}
+$track = $result->fetch_object();
+
+function _404_error(): void {
+    http_response_code(404);
+    exit;
+}
 
 ?>
 
@@ -22,19 +41,20 @@ require_once "./lib/nav.php";
 </div>
 
 <div class="card-box pd-20 height-100-p mb-30">
-    <form action='./forms/add_delivery.php' method='POST'>
+    <form action='./forms/add_info.php?tracking_id=<?php echo $track->tracking_id ?>' method='POST'>
         <div class="row">
             <div class="input-group custom col-md-6">
-                <input type="text" class="form-control form-control-lg" placeholder="Departure Address" name='departure_address' value="<?php echo session_val('departure_address') ?>" required>
+                <input type="text" class="form-control form-control-lg" placeholder="Location" name='location' required>
             </div>
             <div class="input-group custom col-md-6">
-                <input type="text" class="form-control form-control-lg" placeholder="Destination" name='destination' required>
+                <input type="text" class="form-control form-control-lg" placeholder="Status" name='status' required>
             </div>
         </div>
+
         <div class="row">
             <div class="col-sm-12">
                 <div class="input-group mb-0">
-                    <input type='submit' class="btn btn-primary btn-lg btn-block" value='Add Delivery'>
+                    <input type='submit' class="btn btn-primary btn-lg btn-block" value='Add Tracking Info'>
                 </div>
             </div>
         </div>

@@ -59,7 +59,7 @@ function validate_empty_fields (array $post, array $required = []): void {
         if ( empty(trim($value)) && in_array($key, $required) ) {
             array_push($errors, readable_key($key) . ' can not be empty');
         } else if ( $key != 'password' && $key != 'confirm_password' ) {
-            if ( $error_redirect == 'add_product' )
+            if ( $error_redirect == 'add_delivery' )
                 $_SESSION[$key] = $value;
 
             $short_key = explode('_', $key)[0];
