@@ -141,7 +141,7 @@ require_once "./components/header.php";
                         </div>
                         <p><?php echo $app_name ?? '' ?> presents your services with flexible, convenient and cdpose layouts. You can select your favorite layouts & elements for cular ts with unlimited ustomization possibilities. Pixel-perfect replication of the designers is intended.</p>
                         <p><?php echo $app_name ?? '' ?> presents your services with flexible, convefnient and chient anipurpose layouts. You can select your favorite layouts.</p>
-                        <a href="about.html" class="btn">More About Us</a>
+                        <a href="#" class="btn">More About Us</a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12">
