@@ -25,6 +25,12 @@ require_once "./lib/nav.php";
     <form action='./forms/add_delivery.php' method='POST'>
         <div class="row">
             <div class="input-group custom col-md-6">
+                <input type="text" class="form-control form-control-lg" placeholder="Reciever's Name" name='name' required>
+            </div>
+            <div class="input-group custom col-md-6">
+                <input type="text" class="form-control form-control-lg" placeholder="Reciever's Phone" name='phone' required>
+            </div>
+            <div class="input-group custom col-md-6">
                 <input type="text" class="form-control form-control-lg" placeholder="Departure Address" name='departure_address' value="<?php echo session_val('departure_address') ?>" required>
             </div>
             <div class="input-group custom col-md-6">

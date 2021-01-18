@@ -33,6 +33,22 @@ if ( $result->num_rows ) {
                             <p><?php echo $tracks[0]->tracking_id ?></p>
                         </div>
                     </div>
+                    <?php if ( $tracks[0]->name ) { ?>
+                        <div class="col-md-4">
+                            <div class="single-defination">
+                                <h4 class="mb-20">Reciever's Name</h4>
+                                <p><?php echo $tracks[0]->name ?></p>
+                            </div>
+                        </div>
+                    <?php } ?>
+                    <?php if ( $tracks[0]->phone ) { ?>
+                        <div class="col-md-4">
+                            <div class="single-defination">
+                                <h4 class="mb-20">Reciever's Contact Number</h4>
+                                <p><?php echo $tracks[0]->phone ?></p>
+                            </div>
+                        </div>
+                    <?php } ?>
                     <div class="col-md-4">
                         <div class="single-defination">
                             <h4 class="mb-20">Departure Address</h4>

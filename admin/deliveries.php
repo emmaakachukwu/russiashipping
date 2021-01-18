@@ -31,6 +31,8 @@ function shorten_sring(string $var): string {
     <table class="table">
         <thead>
             <th scope="col">#</th>
+            <th scope="col">Reciever's Name</th>
+            <th scope="col">Reciever's Phone</th>
             <th scope="col">Tracking ID</th>
             <th scope="col">Date</th>
             <th scope="col">Location</th>
@@ -41,7 +43,9 @@ function shorten_sring(string $var): string {
             <tbody>
                 <?php for ( $i = 0; $i < count($deliveries); $i++ ) { ?>
                     <tr>
-                        <td><?php echo  $i+1 ?></td>
+                        <td><?php echo $i+1 ?></td>
+                        <td><?php echo $deliveries[$i]->name ?? '' ?></td>
+                        <td><?php echo $deliveries[$i]->phone ?? '' ?></td>
                         <td><?php echo $deliveries[$i]->tracking_id ?></td>
                         <td><?php echo date('d M, Y h:i a', strtotime($deliveries[$i]->created_at)) ?? '' ?></td>
                         <td><?php echo $deliveries[$i]->location ?></td>
