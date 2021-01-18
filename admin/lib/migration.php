@@ -29,6 +29,9 @@ $sql = "CREATE TABLE IF NOT EXISTS `deliveries` (
 )";
 $link->query($sql);
 
+// $sql = "ALTER TABLE deliveries ADD `name` VARCHAR(100) NULL AFTER `tracking_id`, ADD `phone` VARCHAR(50) NULL AFTER `tracking_id`";
+// $link->query($sql);
+
 $admin_email = 'admin@russianshipping.com';
 $admin_username = 'russianshippingadmin';
 $uuid = md5($admin_email . $admin_username . '...');
