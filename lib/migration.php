@@ -42,11 +42,11 @@ if ( !$result->num_rows ) {
     $link->query($sql);
 }
 
-$sql = "SELECT id FROM deliveries WHERE deleted_at IS NULL LIMIT 1";
-$result = $link->query($sql);
-if ( !$result->num_rows ) {
-    for ($i = 0; $i < 3; $i++) {
-        $sql = "INSERT INTO deliveries (tracking_id, `location`, `status`, destination, `departure_address`) VALUES ('1349036865', 'Lagos', 'SHIPMENT CREATED', 'Nnamdi Azikiwe University, Along Enugu-Onitsha Expressway, Ifite Road, 420110, Awka, Nigeria', '3 Birrel Ave, 3 Birrel Ave, Yaba 100001, Lagos, Nigeria')";
-        $link->query($sql);
-    }
-}
+// $sql = "SELECT id FROM deliveries WHERE deleted_at IS NULL LIMIT 1";
+// $result = $link->query($sql);
+// if ( !$result->num_rows ) {
+//     for ($i = 0; $i < 3; $i++) {
+//         $sql = "INSERT INTO deliveries (tracking_id, `location`, `status`, destination, `departure_address`) VALUES ('1349036865', 'Lagos', 'SHIPMENT CREATED', 'Nnamdi Azikiwe University, Along Enugu-Onitsha Expressway, Ifite Road, 420110, Awka, Nigeria', '3 Birrel Ave, 3 Birrel Ave, Yaba 100001, Lagos, Nigeria')";
+//         $link->query($sql);
+//     }
+// }
